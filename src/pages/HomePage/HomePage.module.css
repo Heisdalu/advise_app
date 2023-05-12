@@ -1,0 +1,56 @@
+.adviseContainer {
+  /* border: 1px solid; */
+  max-width: 500px;
+  padding: 2rem 2rem 4.5rem 2rem;
+  text-align: center;
+  display: grid;
+  grid-row-gap: 1.5rem;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 10px;
+  box-shadow: 0 0 5px hsl(217, 19%, 24%);
+  position: relative;
+}
+
+.headerTitle {
+  font-size: 0.8rem;
+  color: hsl(150, 100%, 66%);
+  letter-spacing: 4px;
+}
+
+.message {
+  text-align: center;
+  font-size: 1.5rem;
+  color: hsl(193, 38%, 86%);
+  line-height: 2.5rem;
+}
+
+
+.imgDivider {
+  width: 100%;
+  display: block;
+}
+
+.adviceBtn {
+  width: 70px;
+  margin: 0 auto;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  background-color: hsl(150, 100%, 66%);
+}
+
+.adviceBtn::after {
+  display: block;
+  content: url("../../assets/icon-dice.svg");
+}
+
+@media screen and (min-width: 768px) {
+  .message {
+    font-size: 1.7rem;
+  }
+}
