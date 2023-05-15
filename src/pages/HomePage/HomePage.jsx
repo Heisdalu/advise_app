@@ -12,7 +12,7 @@ const HomePage = () => {
   if (error) {
     return (
       <section className={`${style.adviseContainer} ${style.error}`}>
-        soemthing went wrong. Check your internet😥{" "}
+        something went wrong. Check your internet😥{" "}
       </section>
     );
   }
@@ -20,7 +20,7 @@ const HomePage = () => {
   return (
     <section className={style.adviseContainer}>
       <h1 className={style.headerTitle}>
-        ADVICE <span>{error || adviceText?.slip.id}</span>
+        ADVICE #<span>{adviceText?.slip.id}</span>
       </h1>
       <p className={style.message}>{`"${adviceText.slip.advice}"`}</p>
       <img src={lol} alt="" className={style.imgDivider} />
