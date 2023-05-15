@@ -48,6 +48,10 @@
   cursor: pointer;
 }
 
+.adviceBtn:hover{
+  box-shadow: 0 0 30px 0px hsl(150, 100%, 66%);
+}
+
 .adviceBtn::after {
   display: block;
   content: url("../../assets/icon-dice.svg");
