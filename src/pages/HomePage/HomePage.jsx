@@ -1,19 +1,31 @@
 import style from "./HomePage.module.css";
 import lol from "../../assets/pattern-divider-mobile.svg";
+import useGenerateAdvice from "../../hooks/useGenerateAdvice";
 
 const HomePage = () => {
-  console.log(style);
+  const { adviceText, error, generateNewAdvice } = useGenerateAdvice();
+
+  const clickedBtn = () => {
+    generateNewAdvice();
+  };
+
+  if (error) {
+    return (
+      <section className={`${style.adviseContainer} ${style.error}`}>
+        soemthing went wrong. Check your internet😥{" "}
+      </section>
+    );
+  }
+
   return (
     <section className={style.adviseContainer}>
       <h1 className={style.headerTitle}>
-        ADVICE <span>#117</span>
+        ADVICE <span>{error || adviceText?.slip.id}</span>
       </h1>
-      <p
-        className={style.message}
-      >{`"${"it is easy to sit up and take notice, what's difficult is getting up and taking action"}"`}</p>
+      <p className={style.message}>{`"${adviceText.slip.advice}"`}</p>
       <img src={lol} alt="" className={style.imgDivider} />
 
-      <button className={style.adviceBtn}></button>
+      <button className={style.adviceBtn} onClick={clickedBtn}></button>
     </section>
   );
 };

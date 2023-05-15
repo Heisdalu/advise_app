@@ -1,5 +1,4 @@
 .adviseContainer {
-  /* border: 1px solid; */
   max-width: 500px;
   padding: 2rem 2rem 4.5rem 2rem;
   text-align: center;
@@ -24,6 +23,10 @@
   line-height: 2.5rem;
 }
 
+.error {
+  color: hsl(193, 38%, 86%);
+  font-size: 1.5rem;
+}
 
 .imgDivider {
   width: 100%;
@@ -42,6 +45,7 @@
   transform: translate(-50%, 50%);
   left: 50%;
   background-color: hsl(150, 100%, 66%);
+  cursor: pointer;
 }
 
 .adviceBtn::after {
@@ -50,7 +54,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .message {
+  .message, .error {
     font-size: 1.7rem;
   }
 }
